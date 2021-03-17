@@ -20,7 +20,7 @@ visit_list=[0]*(N+1)                                        # visit_list에 [0]*
 
 def dfs(V):                                                 # V를 인자로 받는 dfs 함수 선언
     visit_list[V]=1                                         # 방문한 점 1로 표시                     
-    print(V, end=' ')                                       # v 출력
+    print(V, end=' ')                                       # V 출력
     for i in range(1,N+1):                                  # 
         if(visit_list[i]==0 and matrix[V][i]==1):           # 
             dfs(i)                                          #
