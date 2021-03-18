@@ -1,5 +1,5 @@
 '''
-15650문제 N과 M(2)
+15650문제 N과 M(2) - 백트레킹
 자연수 N과 M이 주어졌을 때, 아래 조건을 만족하는 길이가 M인 수열을 모두 구하는 프로그램을 작성하시오.
 
 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
@@ -39,6 +39,27 @@ def dfs(cnt):
         # 닫아주면 된다.
         for j in range(i + 1, N):
             check_list[j] = False
-            
         
 dfs(0)
+
+
+
+# import sys
+# def permutation(target_depth, end):
+#     for i in range(1, end + 1):
+#         permutation_array = []
+#         permutation_inner(target_depth, 1, i, end, permutation_array)
+# def permutation_inner(target_depth, current_depth, start, end, array: list[int]):
+#     if start > end:
+#         return
+#     if current_depth == target_depth:
+#         print(*array, start)
+#         return
+#     for i in range(start, end + 1):
+#         array.append(start)
+#         permutation_inner(target_depth, current_depth + 1, i + 1, end, array)
+#         array.pop()
+# end, permutation_depth = sys.stdin.readline().rstrip().split()
+# end = int(end)
+# permutation_depth = int(permutation_depth)
+# permutation(permutation_depth, end)
